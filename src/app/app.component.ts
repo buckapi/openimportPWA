@@ -21,26 +21,6 @@ export class AppComponent implements OnInit {
     public _butler:Butler,
     public router:Router,
   ){
-
-
-    this.script.load(
-      // 'modernizr',
-      // 'jquery',       
-      'modernizr',
-      'jquery',
-      'jquery-migrate',
-      'meanmenu',
-      'scrollUp',
-      'carousel',
-      'slick',
-      'countdown',
-      'wow',
-      'jquery-ui',
-      'nivo.slider',
-      'bootstrap',
-      'plugins',
-      'main'     
-    ).then(data => {console.log('script loaded ', data);}).catch(error => console.log(error));
   }
 
 

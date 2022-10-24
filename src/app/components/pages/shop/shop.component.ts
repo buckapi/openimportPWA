@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { Apollo } from "apollo-angular";
 import { DataService } from '@app/services/data.service'; 
 import gql from "graphql-tag";
+import { ScriptService } from '@app/services/script.service';
+import { ScriptStore } from '@app/services/script.store';
 
 @Component({
   selector: 'app-shop',
@@ -17,11 +19,35 @@ export class ShopComponent implements OnInit {
   categories: any;
   categories$: any;
   constructor(
+    public script:ScriptService,
    private apollo: Apollo,
     public dataApi: DataService,
     public _butler: Butler,
     public router:Router
-    ) { }
+    ) { 
+
+
+      this.script.load(
+        // 'modernizr',
+        // 'jquery',       
+        'modernizr',
+        'jquery',
+        'jquery-migrate',
+        'meanmenu',
+        'scrollUp',
+        'carousel',
+        'slick',
+        'countdown',
+        'wow',
+        'jquery-ui',
+        'nivo.slider',
+        'bootstrap',
+        'plugins',
+        'main'     
+      ).then(data => {console.log('script loaded ', data);}).catch(error => console.log(error));
+  
+
+    }
 
   loadProducts(){
     this._butler.skip=0;
