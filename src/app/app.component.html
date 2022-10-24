@@ -1,0 +1,87 @@
+<div id="main-wrapper" class="show menu-toggle">
+  <app-header  [hidden]="router.url.includes('/login')"></app-header>
+  <router-outlet></router-outlet>
+  <div class="deznav" [hidden]="router.url.includes('/login')">
+    <div class="deznav-scroll" [hidden]="_butler.idApp!='bc000001' || !_butler.isLogged || _butler.userType!='sucursal'" >
+      <ul class="metismenu" id="menu">
+          <li>
+            <a class=" ai-icon mm-active" [routerLink]="['/labceltransactions']"  aria-expanded="false">
+                <i class="flaticon-381-add-1"></i>
+                <span   class="nav-text">Tickets de venta</span>
+              </a>
+          </li>       
+            <li>
+            <a class=" ai-icon mm-active" [routerLink]="['/labcelout']"  aria-expanded="false">
+                <i class="flaticon-381-substract-2"></i>
+                <span   class="nav-text">Salidas</span>
+              </a>
+          </li> 
+
+          <li>
+            <a class=" ai-icon mm-active" [routerLink]="['/cierrecaja']"  aria-expanded="false">
+                <i class="flaticon-381-television"></i>
+                <span   class="nav-text">Cortes diarios</span>
+              </a>
+          </li>    
+          <li>
+            <a class=" ai-icon mm-active" [routerLink]="['/labcelhistory']"  aria-expanded="false">
+                <i class="fa fa-history"></i>
+                <span   class="nav-text">Historial</span>
+              </a>
+          </li>                   
+      </ul>
+          
+      <div class="book-box">
+        <img src="assets/assetsdash/images/book.png" alt="">
+        </div>
+      <div class="copyright">labceltransaction
+        <p><strong> Administrator</strong> © 2022 All Rights Reserved</p>
+        <p class="fs-12">Made with <span class="heart"></span> by buckapi</p>
+      </div>
+    </div>
+
+    <div class="deznav-scroll" [hidden]="_butler.idApp!='bc000001' || !_butler.isLogged || _butler.userType!='admin'" >
+      <ul class="metismenu" id="menu2">
+          <li>
+            <a class=" ai-icon mm-active" [routerLink]="['/labceltransactions']"  aria-expanded="false">
+                <i class="flaticon-381-add-1"></i>
+                <span   class="nav-text">Tickets de venta</span>
+              </a>
+          </li> 
+           <li>
+            <a class=" ai-icon mm-active" [routerLink]="['/labcelout']"  aria-expanded="false">
+                <i class="flaticon-381-substract-2"></i>
+                <span   class="nav-text">Salidas</span>
+              </a>
+          </li>      
+           <li>
+            <a class=" ai-icon mm-active" [routerLink]="['/cierrecaja']"  aria-expanded="false">
+                <i class="flaticon-381-television"></i>
+                <span   class="nav-text">Cortes diarios</span>
+              </a>
+          </li>       
+          <li>
+            <a class=" ai-icon " [routerLink]="['/labcelhistory']"  aria-expanded="false">
+                <i class="fa fa-history"></i>
+                <span   class="nav-text">Historial</span>
+              </a>
+          </li>                   
+      </ul>
+          
+      <div class="book-box">
+        <img src="assets/assetsdash/images/book.png" alt="">
+      </div>
+      <div class="copyright">
+        <p><strong> Administrator</strong> © 2022 All Rights Reserved</p>
+        <p class="fs-12">Made with <span class="heart"></span> by buckapi</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+        

@@ -1,0 +1,50 @@
+  <div class="authincation h-100" style="margin-top: 15%;">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100 align-items-center">
+                <div class="col-md-6">
+                    <div class="authincation-content">
+                        <div class="row no-gutters">
+                            <div class="col-xl-12">
+                                <div class="auth-form">
+                                    <div class="text-center mb-3">
+                                        <a ><img src="assets/assetsdash/images/default.png" alt=" " style="max-width: 100%"></a>
+                                    </div>
+                                    <!-- <h4 class="text-center mb-4">Administrator</h4> -->
+                                   
+                                   <!--  <div class="new-account mt-3">
+                                        <p>Don't have an account? <a class="text-primary" href="page-register.html">Sign up</a></p>
+                                    </div> -->
+
+                                    <section class="auth-form">
+  <div class="text-center">
+  
+  </div>
+  <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1"
+        aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="d-grid">
+      <button type="submit" class="btn btn-info">Entrar</button>
+    </div>
+  
+  </form>
+  <ng-template #showSignTemplate>
+    <a [routerLink]="['/login']" class="text-black">
+      Already have an account? <small>Sign In here!</small>
+    </a>
+  </ng-template>
+</section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

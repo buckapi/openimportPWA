@@ -1,0 +1,216 @@
+<main class="main-content">
+
+            
+
+            <!--== Start Shopping Checkout Area Wrapper ==-->
+            <section class="shopping-checkout-wrap section-space" style="padding-top: 15%;">
+                <div class="container">
+                   <!--  <div class="checkout-page-coupon-wrap">
+                       
+                        <div class="coupon-accordion" id="CouponAccordion">
+                            <div class="card">
+                                <h3>
+                                    <i class="fa fa-info-circle"></i>
+                                    Have a Coupon?
+                                    <a  data-bs-toggle="collapse" data-bs-target="#couponaccordion">Click here to enter your code</a>
+                                </h3>
+                                <div id="couponaccordion" class="collapse" data-bs-parent="#CouponAccordion">
+                                    <div class="card-body">
+                                        <div class="apply-coupon-wrap">
+                                            <p>If you have a coupon code, please apply it below.</p>
+                                            <form action="product-checkout.html#" method="post">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Coupon code">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <button type="button" class="btn-coupon">Apply coupon</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div> -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!--== Start Billing Accordion ==-->
+                            <div class="checkout-billing-details-wrap">
+                                <h2 class="title">Información de contato</h2>
+                                <div class="billing-form-wrap">
+                                    <form action="product-checkout.html#" method="post">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="f_name">Nombre completo <abbr class="required" title="required">*</abbr></label>
+                                                    <input id="f_name" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="com_name">Nombre de compañia (opcional)</label>
+                                                    <input id="com_name" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="street-address">Direccion exacta <abbr class="required" title="required">*</abbr></label>
+                                                    <input id="street-address" type="text" class="form-control" placeholder="House number and street name">
+                                                </div>
+                                                
+                                            </div>
+                                           
+                                            <div class="col-md-12 mb-4">
+                                                <div class="form-group">
+                                                    <label for="district">Departamento <abbr class="required" title="required">*</abbr></label>
+                                                    <select id="district" class="form-control wide">
+                                                        <option>Bogota</option>
+                                                        <option>Santander</option>
+                                                        <option>Algeria</option>
+                                                        <option>Armenia</option>
+                                                        <option>India</option>
+                                                        <option>Pakistan</option>
+                                                        <option>England</option>
+                                                        <option>London</option>
+                                                        <option>London</option>
+                                                        <option>China</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="pz-code">Postcode / ZIP (optional)</label>
+                                                    <input id="pz-code" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="phone">Telefono<abbr class="required" title="required">*</abbr></label>
+                                                    <input id="phone" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="email">Email<abbr class="required" title="required">*</abbr></label>
+                                                    <input id="email" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="col-md-12">
+                                                <div class="form-group mb-0">
+                                                    <label for="order-notes">Observaciones (opcional)</label>
+                                                    <textarea id="order-notes" class="form-control" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--== End Billing Accordion ==-->
+                        </div>
+                        <div class="col-lg-6">
+                            <!--== Start Order Details Accordion ==-->
+                            <div class="checkout-order-details-wrap">
+                                <div class="order-details-table-wrap table-responsive">
+                                    <h2 class="title mb-25">Orden de compra</h2>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="product-name">Producto</th>
+                                                <th class="product-total">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-body">
+                                            <tr class="cart-item">
+                                                <td class="product-name">Satin gown <span class="product-quantity">× 1</span></td>
+                                                <td class="product-total">£69.99</td>
+                                            </tr>
+                                            <tr class="cart-item">
+                                                <td class="product-name">Printed cotton t-shirt <span class="product-quantity">× 1</span></td>
+                                                <td class="product-total">£20.00</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot class="table-foot">
+                                            <tr class="cart-subtotal">
+                                                <th>Subtotal</th>
+                                                <td>£89.99</td>
+                                            </tr>
+                                            <tr class="shipping">
+                                                <th>Shipping</th>
+                                                <td>£2.00</td>
+                                            </tr>
+                                            <tr class="order-total">
+                                                <th>Total </th>
+                                                <td>£91.99</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <div class="shop-payment-method">
+                                        <div id="PaymentMethodAccordion">
+                                            <div class="card">
+                                                <div class="card-header" id="check_payments">
+                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemOne" aria-controls="itemOne" aria-expanded="true">Mercado pago</h5>
+                                                </div>
+                                                <div id="itemOne" class="collapse show" aria-labelledby="check_payments" data-bs-parent="#PaymentMethodAccordion">
+                                                    <div class="card-body">
+                                                        <p>......</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="check_payments2">
+                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemTwo" aria-controls="itemTwo" aria-expanded="false">Transferencia bancaria</h5>
+                                                </div>
+                                                <div id="itemTwo" class="collapse" aria-labelledby="check_payments2" data-bs-parent="#PaymentMethodAccordion">
+                                                    <div class="card-body">
+                                                        <p>Banco Davivienda ....</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="check_payments3">
+                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemThree" aria-controls="itemTwo" aria-expanded="false">Pago contraentrega</h5>
+                                                </div>
+                                                <div id="itemThree" class="collapse" aria-labelledby="check_payments3" data-bs-parent="#PaymentMethodAccordion">
+                                                    <div class="card-body">
+                                                        <p>Efectivo, punto de venta.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="check_payments4">
+                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemFour" aria-controls="itemTwo" aria-expanded="false">Pago con tarjeta</h5>
+                                                </div>
+                                                <div id="itemFour" class="collapse" aria-labelledby="check_payments4" data-bs-parent="#PaymentMethodAccordion">
+                                                    <div class="card-body">
+                                                        <p>Visa, Mastercard ...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="p-text">Su información esta protejida bajo los estandare de seguridad. <a>Politicas de privacidad.</a></p>
+                                        <div class="agree-policy">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" id="privacy" class="custom-control-input visually-hidden">
+                                                <label for="privacy" class="custom-control-label">Aceptar los terminos y condiciones<span class="required">*</span></label>
+                                            </div>
+                                        </div>
+                                        <a  class="btn-place-order">Procesar pago</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--== End Order Details Accordion ==-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--== End Shopping Checkout Area Wrapper ==-->
+
+        </main>
