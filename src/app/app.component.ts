@@ -2,8 +2,9 @@ import { Component,OnInit } from '@angular/core';
 import { BikersService } from './services';
 import { Butler } from './services/butler.service';
 import { Router } from '@angular/router';
+import { ScriptService } from '@app/services/script.service';
+import { ScriptStore } from '@app/services/script.store';
 
-import { ScriptService } from './services/script.service';
 //declare var $: any;
 @Component({
   selector: 'app-root',
@@ -15,11 +16,32 @@ export class AppComponent implements OnInit {
     public tixToAdd=[];
 
   constructor(
-    //public script:ScriptService,
+    public script:ScriptService,
     public bikersScript:BikersService,
     public _butler:Butler,
-        public router:Router,
-  ){}
+    public router:Router,
+  ){
+
+
+    this.script.load(
+      // 'modernizr',
+      // 'jquery',       
+      'modernizr',
+      'jquery',
+      'jquery-migrate',
+      'meanmenu',
+      'scrollUp',
+      'carousel',
+      'slick',
+      'countdown',
+      'wow',
+      'jquery-ui',
+      'nivo.slider',
+      'bootstrap',
+      'plugins',
+      'main'     
+    ).then(data => {console.log('script loaded ', data);}).catch(error => console.log(error));
+  }
 
 
 
