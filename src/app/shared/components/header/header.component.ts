@@ -17,22 +17,11 @@ export class HeaderComponent implements AfterViewInit {
   constructor(
     public _butler:Butler,
         private readonly authSvc: AuthService,
-    public script:ScriptService,
+    //public script:ScriptService,
     public router:Router
   ) {
     
-    console.log('Loading External Scripts');
-    this.script.load(  
-      // 'modernizr', 
-      // 'jquery', 
-      'jquery-migrate', 
-      'bootstrap.bundle', 
-      'swiper-bundle', 
-      'fancybox', 
-      'jquery.nice-select', 
-      'main'
-    ).then(data => {console.log('script loaded ', data);}).catch(error => console.log(error));
-     
+    
    }
 
   config: SwiperOptions = {

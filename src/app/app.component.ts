@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
     public tixToAdd=[];
 
   constructor(
-    public script:ScriptService,
+    //public script:ScriptService,
     public bikersScript:BikersService,
     public _butler:Butler,
         public router:Router,

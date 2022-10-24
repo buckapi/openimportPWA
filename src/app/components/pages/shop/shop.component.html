@@ -1,146 +1,1263 @@
-
-
-        <main class="main-content">
-
-            <!--== Start Page Header Area Wrapper ==-->
-            <section class="page-header-area pt-10 pb-9" data-bg-color="#FFF3DA">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="page-header-st3-content text-center text-md-start">
-                                <ol class="breadcrumb justify-content-center justify-content-md-start">
-                                    <li class="breadcrumb-item"><a class="text-dark" [routerLink]="['shop']">Tienda</a></li>
-                                    <li class="breadcrumb-item active text-dark" aria-current="page">Productos</li>
-                                </ol>
-                                <h2 class="page-header-title">Todos</h2>
+<div class="slider-area pb-50">
+    <div class="slider-wrapper theme-default">
+        <!-- Slider Background  Image Start-->
+        <div id="slider" class="nivoSlider">
+            <a href="shop.html"><img src="assetsopen/img/slider/7.jpg" data-thumb="img/slider/7.jpg" alt="" title="#htmlcaption" /></a>
+            <a href="shop.html"><img src="assetsopen/img/slider/8.jpg" data-thumb="img/slider/8.jpg" alt="" title="#htmlcaption2" /></a>
+        </div>
+        <!-- Slider Background  Image Start-->
+    </div>
+</div>
+<div class="policy-style-two company-policy pb-50">
+    <div class="container">
+        <div class="main-policy">
+            <div class="row">
+                <!-- Single Policy Start -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="policy-conditions">
+                        <div class="single-policy po-1">
+                            <div class="policy-desc">
+                                <h3>Reparto a domicilio</h3>
+                                <p>Descuentos en envios regionales</p>
                             </div>
-                        </div>
-                        <div class="col-md-7">
-                            <h5 class="showing-pagination-results mt-5 mt-md-9 text-center text-md-end">Mostrando 09 Resultados</h5>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!--== End Page Header Area Wrapper ==-->
+                <!-- Single Policy End -->
+                 <!-- Single Policy Start -->
+                <div class="col-lg-3 col-sm-6">
+                   <div class="policy-conditions">
+                       <div class="single-policy po-2">
+                        <div class="policy-desc">
+                            <h3>Soporte 12/7</h3>
+                            <p>Suporte en linea</p>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+                <!-- Single Policy End -->
+                 <!-- Single Policy Start -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="policy-conditions">
+                         <div class="single-policy po-3">
+                        <div class="policy-desc">
+                            <h3>Devoluciones</h3>
+                            <p>Solo para equipos defectuosos por 7 dias</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Single Policy End -->
+                 <!-- Single Policy Start -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="policy-conditions">
+                         <div class="single-policy po-4">
+                        <div class="policy-desc">
+                            <h3>Afiliados a nuestra tienda</h3>
+                            <p>Descuentos en segunda compra de 10%</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Single Policy End -->
+            </div>
+            <!-- Row End -->
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<div class="slider-under-content pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                
+                <!-- Single Banner End -->
+                <!-- New Pro Content End -->
+               
+                <div class="new-pro-content border-default new-products mb-50 home-2-actions">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Featured Product List Item Start -->
+                            <ul class="nav nav-pills product-list product-tab-list universal-margin mb-30" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link active" id="Products-tab" data-bs-toggle="pill" data-bs-target="#Products" type="button" role="tab" aria-controls="Products" aria-selected="true">Accesorios</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link" id="OnSale-tab" data-bs-toggle="pill" data-bs-target="#OnSale" type="button" role="tab" aria-controls="OnSale" aria-selected="false">Categoria2</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link" id="featured-tab" data-bs-toggle="pill" data-bs-target="#featured" type="button" role="tab" aria-controls="featured" aria-selected="false">Categoria3</button>
+                                </li>
+                              </ul>
+                            <!-- Featured Product List Item End -->
 
-            <!--== Start Product Area Wrapper ==-->
-            <section class="section-space">
-                <div class="container">
-                    <div class="row justify-content-between flex-xl-row-reverse">
-                        <div class="col-xl-9">
-                            <div class="row g-3 g-sm-6">
-                                <div class="col-6 col-lg-4 col-xl-4 mb-4 mb-sm-8" *ngFor='let product of products$ | async'>
-                                    <!--== Start Product Item ==-->
-                                    <div class="product-item product-st3-item">
-                                        <div class="product-thumb">
-                                            <a class="d-block" (click)="viewProduct(product)">
-                                                <img src="{{product.images[0]}}" width="370" height="450" alt="Image-HasTech">
-                                            </a>
-                                            <!-- <span class="flag-new">{{product.ref}}</span> -->
-                                            <div class="product-action">
-                                                <button type="button" class="product-action-btn action-btn-quick-view" data-bs-toggle="modal" (click)="viewProduct(product)">
-                                                    <i class="fa fa-expand"></i>
-                                                </button>
-                                                <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal" (click)="quick(product)">
-                                                    <span>Agregar al carro</span>
-                                                </button>
-                                                <!-- <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </button> -->
-                                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="tab-content product-tab-content">
+                        <div class="tab-pane fade show active" id="Products" role="tabpanel" aria-labelledby="Products-tab">
+                             <!-- New Products Activation Start -->
+                             <div class="home-2-new-pro-active home-2-new-customize owl-carousel">
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/10.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/8.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Push It Messenger Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
                                         </div>
-                                        <div class="product-info">
-                                            <div class="product-rating">
-                                              <!--   <div class="rating">
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-half-o"></i>
-                                                </div> -->
-                                                <div class="reviews">ref: {{product.ref}}</div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
                                             </div>
-                                            <h4 class="title"><a (click)="viewProduct(product)">{{product.name}}</a></h4>
-                                            <div class="prices">
-                                                <span class="price">{{product.price}}</span>
-                                                <!-- <span class="price-old">300.00</span> -->
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
                                             </div>
-                                        </div>
-                                        <div class="product-action-bottom">
-                                           <button type="button" class="product-action-btn action-btn-quick-view" (click)="viewProduct(product)">
-                                            <i class="fa fa-expand"></i>
-                                        </button>            
-                                            <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal" (click)=quick(product)>
-                                                <span>Agregar al carro</span>
-                                            </button>
                                         </div>
                                     </div>
-                                    <!--== End prPduct Item ==-->
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
                                 </div>
-                          
-                                <div class="col-12">
-                                    <ul class="pagination justify-content-center me-auto ms-auto mt-5 mb-10">
-                                        <li class="page-item">
-                                            <a class="page-link previous" href="product.html" aria-label="Previous">
-                                                <span class="fa fa-chevron-left" aria-hidden="true"></span>
-                                            </a>
-                                        </li>
-                                <!--         <li class="page-item"><a class="page-link" (click)="loadmore(1)">01</a></li>
-                                        <li class="page-item"><a class="page-link" (click)="loadmore(2)">02</a></li>
-                                        <li class="page-item"><a class="page-link" (click)="loadmore(3)">03</a></li>
-                                        <li class="page-item"><a class="page-link" (click)="loadmore(4)">....</a></li> -->
-                                        <li class="page-item">
-                                            <a class="page-link next" (click)="loadmore(4)" aria-label="Next">
-                                                <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/9.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/15.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Endeavor Daytrip Backpack</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$33.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
                                 </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/12.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/13.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Impulse Duffle</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/1.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/8.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Voyage Yoga Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/2.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/11.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Wayfarer Messenger Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-sale">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                        <img class="primary-img" src="assetsopen/img/products/7.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/6.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Push It Messenger Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
                             </div>
+                            <!-- New Products Activation End -->
                         </div>
-                        <div class="col-xl-3">
-                            <div class="product-sidebar-widget">
-                                <div class="product-widget-search">
-                                    <form action="">
-                                        <input type="search" placeholder="Search Here">
-                                        <button type="submit"><i class="fa fa-search"></i></button>
-                                    </form>
+                        <div class="tab-pane fade" id="OnSale" role="tabpanel" aria-labelledby="OnSale-tab">
+                             <!-- New Products Activation Start -->
+                             <div class="home-2-new-pro-active home-2-new-customize owl-carousel">
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/7.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/6.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Push It Messenger Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
                                 </div>
-                                
-                                <div class="product-widget">
-                                    <h4 class="product-widget-title">Categorias</h4>
-                                    <ul class="product-widget-category">
-                                        <li *ngFor='let category of categories$ | async'><a >{{category.name}} <span>(?)</span></a></li>
-                                        <!-- <li><a href="product.html">Computer <span>(4)</span></a></li>
-                                        <li><a href="product.html">Covid-19 <span>(2)</span></a></li>
-                                        <li><a href="product.html">Electronics <span>(6)</span></a></li>
-                                        <li><a href="product.html">Frame Sunglasses <span>(12)</span></a></li>
-                                        <li><a href="product.html">Furniture <span>(7)</span></a></li>
-                                        <li><a href="product.html">Genuine Leather <span>(9)</span></a></li> -->
-                                    </ul>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/16.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/2.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="index.html#">Push It Messenger Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$32.00</span></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
                                 </div>
-                                <div class="product-widget mb-0">
-                                    <h4 class="product-widget-title">Tags</h4>
-                                    <ul class="product-widget-tags">
-                                        <li><a href="blog.html">en desarrollo</a></li>
-                                    <!--     <li><a href="blog.html">MakeupArtist</a></li>
-                                        <li><a href="blog.html">Makeup</a></li>
-                                        <li><a href="blog.html">Hair</a></li>
-                                        <li><a href="blog.html">Nails</a></li>
-                                        <li><a href="blog.html">Hairstyle</a></li>
-                                        <li><a href="blog.html">Skincare</a></li> -->
-                                    </ul>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/1.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/8.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Voyage Yoga Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
                                 </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/2.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/11.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Wayfarer Messenger Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-sale">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/10.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/8.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Push It Messenger Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/9.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/15.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Endeavor Daytrip Backpack</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$33.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
+                            </div>
+                            <!-- New Products Activation End -->
+                        </div>
+                        <div class="tab-pane fade" id="featured" role="tabpanel" aria-labelledby="featured-tab">
+                             <!-- New Products Activation Start -->
+                             <div class="home-2-new-pro-active home-2-new-customize owl-carousel">
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/2.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/11.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Wayfarer Messenger Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-sale">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/7.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/6.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Push It Messenger Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/16.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/2.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Push It Messenger Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$32.00</span></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/10.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/8.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Push It Messenger Bag</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/9.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/15.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="index.html#">Endeavor Daytrip Backpack</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$33.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
+                                <!-- Single Product Start -->
+                                <div class="single-product">
+                                    <!-- Product Image Start -->
+                                    <div class="pro-img">
+                                        <a href="product.html">
+                                            <img class="primary-img" src="assetsopen/img/products/12.jpg" alt="single-product">
+                                            <img class="secondary-img" src="assetsopen/img/products/13.jpg" alt="single-product">
+                                        </a>
+                                    </div>
+                                    <!-- Product Image End -->
+                                    <!-- Product Content Start -->
+                                    <div class="pro-content">
+                                        <h4><a href="product.html">Impulse Duffle</a></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                        <div class="pro-actions">
+                                            <div class="actions-primary">
+                                                <a href="cart.html" data-bs-toggle="tooltip" title="Add to Cart">Add To Cart</a>
+                                            </div>
+                                            <div class="actions-secondary">
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" title="Add to Compare"><i class="fa fa-signal"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Content End -->
+                                    <span class="sticker-new">OFF-32%</span>
+                                </div>
+                                <!-- Single Product End -->
+                            </div>
+                            <!-- New Products Activation End -->
+                        </div>
+                      </div>
+
+                    <!-- Tab-Content End -->
+                </div>
+                <!-- New Pro Content End -->
+                <!-- Single Banner Start -->
+                <div class="single-banner zoom mb-50">
+                    <a href="index.html#"><img src="assetsopen/img/banner/7.jpg" alt="slider-banner"></a>
+                </div>
+                <!-- Single Banner End -->
+                
+                <!-- Best Selling Product End -->
+            </div>
+            <div class="col-lg-3">
+                <!-- Home-2 Best Seller Product Start -->
+                <div class="best-selling-items border-default universal-padding">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="group-title">
+                                <h2>Productos mas vendidos</h2>
                             </div>
                         </div>
                     </div>
+                    <div class="best-seller-unique owl-carousel">
+                        <!-- Best Seller Multi Product Start -->
+                        <div class="best-seller-multi-product">
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <!-- Product Image Start -->
+                                <div class="pro-img">
+                                    <a href="product.html">
+                                        <img class="primary-img" src="assetsopen/img/products/17.jpg" alt="single-product">
+                                    </a>
+                                </div>
+                                <!-- Product Image End -->
+                                <!-- Product Content Start -->
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Set of Sprite Yoga Straps</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$38.00</span><del class="prev-price">$36.00</del></p>
+                                </div>
+                                <!-- Product Content End -->
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <!-- Product Image Start -->
+                                <div class="pro-img">
+                                    <a href="product.html">
+                                        <img class="primary-img" src="assetsopen/img/products/16.jpg" alt="single-product">
+                                    </a>
+                                </div>
+                                <!-- Product Image End -->
+                                <!-- Product Content Start -->
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Strive Shoulder Pack</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$32.00</span></p>
+                                </div>
+                                <!-- Product Content End -->
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <!-- Product Image Start -->
+                                <div class="pro-img">
+                                    <a href="product.html">
+                                        <img class="primary-img" src="assetsopen/img/products/7.jpg" alt="single-product">
+                                    </a>
+                                </div>
+                                <!-- Product Image End -->
+                                <!-- Product Content Start -->
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Crown Summit Backpack</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$52.00</span></p>
+                                </div>
+                                <!-- Product Content End -->
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <!-- Product Image Start -->
+                                <div class="pro-img">
+                                    <a href="product.html">
+                                        <img class="primary-img" src="assetsopen/img/products/13.jpg" alt="single-product">
+                                    </a>
+                                </div>
+                                <!-- Product Image End -->
+                                <!-- Product Content Start -->
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Rival Field Messenger</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$54.00</span><del class="prev-price">$46.00</del></p>
+                                </div>
+                                <!-- Product Content End -->
+                            </div>
+                            <!-- Single Product End -->
+                        </div>
+                        <!-- Best Seller Multi Product End -->
+                        <!-- Best Seller Multi Product Start -->
+                        <div class="best-seller-multi-product">
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <!-- Product Image Start -->
+                                <div class="pro-img">
+                                    <a href="product.html">
+                                        <img class="primary-img" src="assetsopen/img/products/13.jpg" alt="single-product">
+                                    </a>
+                                </div>
+                                <!-- Product Image End -->
+                                <!-- Product Content Start -->
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Rival Field Messenger</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$54.00</span><del class="prev-price">$46.00</del></p>
+                                </div>
+                                <!-- Product Content End -->
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <!-- Product Image Start -->
+                                <div class="pro-img">
+                                    <a href="product.html">
+                                        <img class="primary-img" src="assetsopen/img/products/18.jpg" alt="single-product">
+                                    </a>
+                                </div>
+                                <!-- Product Image End -->
+                                <!-- Product Content Start -->
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Set of Sprite Yoga Straps</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$38.00</span><del class="prev-price">$36.00</del></p>
+                                </div>
+                                <!-- Product Content End -->
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <!-- Product Image Start -->
+                                <div class="pro-img">
+                                    <a href="product.html">
+                                        <img class="primary-img" src="assetsopen/img/products/17.jpg" alt="single-product">
+                                    </a>
+                                </div>
+                                <!-- Product Image End -->
+                                <!-- Product Content Start -->
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Set of Sprite Yoga Straps</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$38.00</span><del class="prev-price">$36.00</del></p>
+                                </div>
+                                <!-- Product Content End -->
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <!-- Product Image Start -->
+                                <div class="pro-img">
+                                    <a href="product.html">
+                                        <img class="primary-img" src="assetsopen/img/products/16.jpg" alt="single-product">
+                                    </a>
+                                </div>
+                                <!-- Product Image End -->
+                                <!-- Product Content Start -->
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Strive Shoulder Pack</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$32.00</span></p>
+                                </div>
+                                <!-- Product Content End -->
+                            </div>
+                            <!-- Single Product End -->
+                        </div>
+                        <!-- Best Seller Multi Product End -->
+                    </div>
                 </div>
-            </section>
-            <!--== End Product Area Wrapper ==-->
+                <!-- Home-2 Best Seller Product End -->
+            </div>
+        </div>
+    </div>
+</div>
 
-            <!--== Start Product Banner Area Wrapper ==-->
+<div class="random-product pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="border-default universal-padding">
+                    <div class="group-title">
+                        <h2>Todos los productos </h2>
+                    </div>
+                    <!-- Random Product Activation Start -->
+                    <div class="random-pro-active owl-carousel slider-right-content">
+                        <!-- Double Product Start -->
+                        <div class="double-pro">
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href="product.html"><img class="img" src="assetsopen/img/products/1.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Voyage Yoga Bag</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$30.00</span><del class="prev-price">$32.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href="product.html"><img class="img" src="assetsopen/img/products/3.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Driven Backpack</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$36.00</span></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                        </div>
+                        <!-- Double Product End -->
+                        <!-- Double Product Start -->
+                        <div class="double-pro">
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href="product.html"><img class="img" src="assetsopen/img/products/5.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Impulse Duffle</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$70.00</span><del class="prev-price">$74.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href="product.html"><img class="img" src="assetsopen/img/products/7.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Crown Summit Backpack</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$38.00</span></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                        </div>
+                        <!-- Double Product End -->
+                        <!-- Double Product Start -->
+                        <div class="double-pro">
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href="product.html"><img class="img" src="assetsopen/img/products/7.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Impulse Duffle</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$70.00</span><del class="prev-price">$74.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href="product.html"><img class="img" src="assetsopen/img/products/5.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Crown Summit Backpack</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$38.00</span></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                        </div>
+                        <!-- Double Product End -->
+                        <!-- Double Product Start -->
+                        <div class="double-pro">
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href="product.html"><img class="img" src="assetsopen/img/products/1.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Fusion Backpack</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$59.00</span></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href="product.html"><img class="img" src="assetsopen/img/products/3.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Voyage Yoga Bag</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$40.00</span><del class="prev-price">$44.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                        </div>
+                        <!-- Double Product End -->
+                        <!-- Double Product Start -->
+                        <div class="double-pro">
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href="product.html"><img class="img" src="assetsopen/img/products/5.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Impulse Duffle</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$70.00</span><del class="prev-price">$74.00</del></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                            <!-- Single Product Start -->
+                            <div class="single-product">
+                                <div class="pro-img">
+                                    <a href="product.html"><img class="img" src="assetsopen/img/products/7.jpg" alt="product-image"></a>
+                                </div>
+                                <div class="pro-content">
+                                    <h4><a href="product.html">Crown Summit Backpack</a></h4>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <p><span class="price">$38.00</span></p>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                        </div>
+                        <!-- Double Product End -->
+                    </div>
+                    <!-- Random Product Activation End -->
+                </div>
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+    <!-- Container End -->
+</div>
 
-
-        </main>
-
-    
+<footer class="black-o-bg">
+    <!-- Footer Top Start -->
+    <div class="footer-top ptb-75">
+        <div class="container">
+            <div class="row">
+                <!-- Single Footer Start -->
+                <div class="col-md-6 col-sm-6 col-12">
+                    <div class="single-footer">
+                        <h3>Open Import</h3>
+                        <div class="footer-content">
+                            <p>Somos una empresa dedicada a la importación y venta de productos que tiene como objetivo  facilitar tu estilo de vida.</p>
+                            <span>Metodos de pago:</span>
+                            <p><a href="shop.html#"><img class="img" src="assetsopen/img/footer/1.png" alt="payment-image"></a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Footer Start -->
+                <!-- Single Footer Start -->
+                <div class="col-md-3 col-sm-3 col-6 footer-full">
+                    <div class="single-footer">
+                        <h3 class="footer-title">Informacion</h3>
+                        <div class="footer-content">
+                            <ul class="footer-list">
+                                <li><a href="shop.html#">Tienda</a></li>
+                                <li><a href="about.html#">Sobre nosotros</a></li>
+                                <li><a href="contact.html#">Contacto</a></li>
+                                <li><a href="index.html#">Politicas de privacidad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Footer Start -->
+                <!-- Single Footer Start -->
+                <div class="col-md-3 col-sm-3 col-6 footer-full">
+                    <div class="single-footer">
+                        <h3 class="footer-title">Mi cuenta</h3>
+                        <div class="footer-content">
+                            <ul class="footer-list">
+                                <li><a href="index.html">Mi cuenta</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+                <!-- Single Footer Start -->
+        </div>
+            <!-- Row End -->
+    </div>
+    <div class="footer-bottom ptb-40">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <p class="pt-10">Copyright © Openimport Todos los derechos reservados<a href="https://www.buckapi.us" target="_blanck"> Buckapi</a></p>
+                <div class="footer-social-content">
+                    <ul class="social-content-list">
+                        <li><a href="https://www.facebook.com/openimportec" target="_blanck"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/openimport_ec/" target="_blanck"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@openimport?lang=es" target="_blanck"><i class="fa fa-tiktok"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Container End -->
+    </div>
+    <!-- Footer Bottom End -->
+</footer>
