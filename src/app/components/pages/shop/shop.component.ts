@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Butler} from '@app/services/butler.service';
 import { Router } from '@angular/router';
-
 import { Apollo } from "apollo-angular";
 import { DataService } from '@app/services/data.service'; 
 import gql from "graphql-tag";
@@ -19,17 +18,13 @@ export class ShopComponent implements OnInit {
   categories: any;
   categories$: any;
   constructor(
-    public script:ScriptService,
-   private apollo: Apollo,
-    public dataApi: DataService,
-    public _butler: Butler,
-    public router:Router
+      public script:ScriptService,
+      private apollo: Apollo,
+      public dataApi: DataService,
+      public _butler: Butler,
+      public router:Router
     ) { 
-
-
-      this.script.load(
-        // 'modernizr',
-        // 'jquery',       
+      this.script.load(     
         'modernizr',
         'jquery',
         'jquery-migrate',
@@ -44,9 +39,9 @@ export class ShopComponent implements OnInit {
         'bootstrap',
         'plugins',
         'main'     
-      ).then(data => {console.log('script loaded ', data);}).catch(error => console.log(error));
-  
-
+      )
+      .then(data => {console.log('loaded from shop', data);})
+      .catch(error => console.log(error));
     }
 
   loadProducts(){
@@ -59,7 +54,6 @@ export class ShopComponent implements OnInit {
      this.products$=this.dataApi.products$;   
      this.categories$=this.dataApi.categories$;   
    // this.loadProducts();
-
   }
 
 
@@ -86,8 +80,5 @@ public quick(tix:any){
       this.dataApi.getDataAPI(this._butler.skip,this._butler.limit);   
      this.products$=this.dataApi.products$;  
      // this._butler.limit=this._butler.limit+9; 
-
-
   }
-
 }
