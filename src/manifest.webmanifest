@@ -1,8 +1,8 @@
 {
-  "name": "Administrator",
-  "short_name": "Administrator",
-  "theme_color": "#1775ee",
-  "background_color": "#1775ee",
+  "name": "OPEN IMPORT",
+  "short_name": "OPEN IMPORT",
+  "theme_color": "#fff",
+  "background_color": "#fff",
   "display": "fullscreen",
   "scope": "./",
   "start_url": "./",
