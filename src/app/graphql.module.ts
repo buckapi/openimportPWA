@@ -26,13 +26,13 @@ export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
           default: /* <-- this settings will be saved as default client */ {
             cache: new InMemoryCache(),
             link: httpLink.create({
-              uri: 'https://db.buckapi.us:4000',
+              uri: 'https://db.buckapi.us:4001',
             }),
           },
           labcel: /* <-- these settings will be saved by name: newClientName */ {
             cache: new InMemoryCache(),
             link: httpLink.create({
-              uri: 'https://db.buckapi.us:4004',
+              uri: 'https://db.buckapi.us:4003',
             }),
           },
         };
