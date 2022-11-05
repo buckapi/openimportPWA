@@ -29,10 +29,10 @@ export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
               uri: 'https://db.buckapi.us:4001',
             }),
           },
-          labcel: /* <-- these settings will be saved by name: newClientName */ {
+          openimport: /* <-- these settings will be saved by name: newClientName */ {
             cache: new InMemoryCache(),
             link: httpLink.create({
-              uri: 'https://db.buckapi.us:4003',
+              uri: 'https://db.buckapi.us:4004',
             }),
           },
         };
