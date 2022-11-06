@@ -25,20 +25,12 @@ export class ShopComponent implements AfterViewInit {
       public router:Router
     ) { 
       this.script.load(     
-        'modernizr',
-        'jquery',
-        'jquery-migrate',
-        'meanmenu',
-        'scrollUp',
-        'carousel',
-        'slick',
-        'countdown',
-        'wow',
-        'jquery-ui',
-        'nivo.slider',
+        'popper',
+      
         'bootstrap',
-        'plugins',
-        'main'     
+        'swiper',
+        'glightbox',
+        'glightbox'     
       )
       .then(data => {console.log('loaded from shop', data);})
       .catch(error => console.log(error));

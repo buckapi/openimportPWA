@@ -13,18 +13,10 @@ export const ScriptStore: Scripts[] = [
     //{name: 'deznav', src: './assets/assetsdash/js/deznav-init.js'},
     //{name: 'demo', src: './assets/assetsdash/js/demo.js'}
 
-  {name: 'modernizr', src: './assets/assetsopen/js/vendor/modernizr-2.8.3.min.js'},
-  {name: 'jquery', src: './assets/assetsopen/js/vendor/jquery-1.12.4.min.js'},
-  {name: 'jquery-migrate', src: './assets/assetsopen/js/vendor/jquery-migrate-1.4.1.min.js'},
-  {name: 'meanmenu', src: './assets/assetsopen/js/jquery.meanmenu.min.js'},
-  {name: 'scrollUp', src: './assets/assetsopen/js/jquery.scrollUp.js'},
-  {name: 'carousel', src: './assets/assetsopen/js/owl.carousel.min.js'},
-  {name: 'slick', src: './assets/assetsopen/js/slick.min.js'},
-  {name: 'countdown', src: './assets/assetsopen/js/jquery.countdown.min.js'},
-  {name: 'wow', src: './assets/assetsopen/js/wow.min.js'},
-  {name: 'jquery-ui', src: './assets/assetsopen/js/jquery-ui.min.js'},
-  {name: 'nivo.slider', src: './assets/assetsopen/js/jquery.nivo.slider.js'},
-  {name: 'bootstrap', src: './assets/assetsopen/js/bootstrap.bundle.min.js'},
-  {name: 'plugins', src: './assets/assetsopen/js/plugins.js'},
-  {name: 'main', src: './assets/assetsopen/js/main.js'}
+  {name: 'popper', src: './assets/assetsParts/js/vendor/popper.js'},
+  {name: 'bootstrap', src: './assets/assetsParts/js/vendor/bootstrap.min.js'},
+  {name: 'swiper', src: './assets/assetsParts/js/plugins/swiper-bundle.min.js'},
+  {name: 'glightbox', src: './assets/assetsParts/js/plugins/glightbox.min.js'},
+ 
+  {name: 'script', src: './assets/assetsParts/js/script.js'}
 ];
