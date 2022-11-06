@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import {Butler} from '@app/services/butler.service';
 import { Router } from '@angular/router';
 import { Apollo } from "apollo-angular";
@@ -12,7 +12,7 @@ import { ScriptStore } from '@app/services/script.store';
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.css']
 })
-export class ShopComponent implements OnInit {
+export class ShopComponent implements AfterViewInit {
   products: any;
   products$: any;  
   categories: any;
@@ -50,7 +50,7 @@ export class ShopComponent implements OnInit {
      
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
      this.products$=this.dataApi.products$;   
      this.categories$=this.dataApi.categories$;   
    // this.loadProducts();

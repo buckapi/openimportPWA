@@ -138,7 +138,7 @@ const LOGIN =  gql`
       // this.getDiscount(0,0);
     }
      getDataAPI(vskip:any,vlimit:any):void{
-        this.apollo.use('labcel').watchQuery<any>({
+        this.apollo.use('openimport').watchQuery<any>({
             query: GETPRODUCTS,
             variables:{
                 status:"activated",
