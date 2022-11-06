@@ -30,7 +30,7 @@ export class ShopComponent implements AfterViewInit {
         'bootstrap',
         'swiper',
         'glightbox',
-        'glightbox'     
+        'script'     
       )
       .then(data => {console.log('loaded from shop', data);})
       .catch(error => console.log(error));
