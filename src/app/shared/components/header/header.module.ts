@@ -4,6 +4,7 @@ import { HeaderComponent } from './header.component';
 import { RouterModule } from '@angular/router';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
   ],
   imports: [
     CommonModule,
+    FontAwesomeModule,
     RouterModule,
     NgxUsefulSwiperModule
   ],

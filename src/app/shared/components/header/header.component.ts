@@ -6,13 +6,15 @@ import { ScriptStore } from '@app/services/script.store';
 import { SwiperOptions } from 'swiper';
 import { BikersService } from '@app/services';
 import { AuthService } from '@services/auth.service';
+import { faCoffee, faUser } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements AfterViewInit {
-
+ faCoffee = faCoffee;
+ faUser = faUser;
   link:string="";
   constructor(
     public _butler:Butler,
