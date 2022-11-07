@@ -2260,6 +2260,7 @@ select {
     line-height: 1.7rem;
     background: var(--secondary-color);
     text-align: center;
+    font-weight: bolder;
     border-radius: 50%;
     color: var(--text-white-color)
 }
