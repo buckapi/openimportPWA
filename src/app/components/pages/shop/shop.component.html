@@ -732,13 +732,13 @@
                                 <div class="choose__category--content">
                                     <h2 class="choose__category--title">Choose category</h2>
                                     <ul class="choose__category--menu">
-                                        <li class="choose__category--menu__list">
-                                            <svg class="choose__category--menu__icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <li class="choose__category--menu__list" *ngFor="let category of categories, let i = index ">
+                                            <!-- <svg class="choose__category--menu__icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7 6.00003L1.26232 12L0 10.68L4.47539 6L0 1.32002L1.26232 0L7 6.00003Z" fill="currentColor"/>
-                                            </svg>
-                                             <a class="choose__category--menu__link" href="shop.html">Engine Partses</a>
+                                            </svg> -->
+                                             <a class="choose__category--menu__link" href="shop.html">{{category.name}}</a>
                                         </li>
-                                        <li class="choose__category--menu__list">
+                                     <!--    <li class="choose__category--menu__list">
                                             <svg class="choose__category--menu__icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7 6.00003L1.26232 12L0 10.68L4.47539 6L0 1.32002L1.26232 0L7 6.00003Z" fill="currentColor"/>
                                             </svg>
@@ -785,7 +785,7 @@
                                             <path d="M7 6.00003L1.26232 12L0 10.68L4.47539 6L0 1.32002L1.26232 0L7 6.00003Z" fill="currentColor"/>
                                             </svg>
                                              <a class="choose__category--menu__link" href="shop.html">Inhaler Pressure Drop</a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                                 <div class="choose__category--banner position__relative">

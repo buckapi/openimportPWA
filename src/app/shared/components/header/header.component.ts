@@ -7,6 +7,7 @@ import { SwiperOptions } from 'swiper';
 import { BikersService } from '@app/services';
 import { AuthService } from '@services/auth.service';
 import { faCoffee, faUser } from '@fortawesome/free-solid-svg-icons';
+import {CATEGORIES} from '@app/services/categories.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -15,13 +16,15 @@ import { faCoffee, faUser } from '@fortawesome/free-solid-svg-icons';
 export class HeaderComponent implements AfterViewInit {
  faCoffee = faCoffee;
  faUser = faUser;
-  link:string="";
+  link:string="";  
+  public categories:any=[];
   constructor(
     public _butler:Butler,
         private readonly authSvc: AuthService,
     //public script:ScriptService,
     public router:Router
   ) {
+  this.categories=CATEGORIES
     
     
    }

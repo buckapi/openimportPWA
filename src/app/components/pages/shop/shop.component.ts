@@ -6,7 +6,7 @@ import { DataService } from '@app/services/data.service';
 import gql from "graphql-tag";
 import { ScriptService } from '@app/services/script.service';
 import { ScriptStore } from '@app/services/script.store';
-
+import {CATEGORIES} from '@app/services/categories.service';
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -24,6 +24,7 @@ export class ShopComponent implements AfterViewInit {
       public _butler: Butler,
       public router:Router
     ) { 
+  this.categories=CATEGORIES
       this.script.load(     
         'popper',
       
