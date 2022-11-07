@@ -701,17 +701,21 @@
         <section class="product__section section--padding  pt-0">
             <div class="container">
                 <div class="section__heading section__heading--flex border-bottom d-flex justify-content-between mb-30">
-                    <h2 class="section__heading--maintitle">Populer <span>Products</span></h2>
+                    <h2 class="section__heading--maintitle">Productos <span>destacados</span></h2>
                     <ul class="nav tab__btn--wrapper" role="tablist">
                         <li class="tab__btn--item" role="presentation">
-                            <button class="tab__btn--link active" data-bs-toggle="tab" data-bs-target="#recent" type="button" role="tab" aria-selected="true"> Recent
+                            <button class="tab__btn--link active" data-bs-toggle="tab" data-bs-target="#recent" type="button" role="tab" aria-selected="true"> Recientes
                             </button>
                         </li>
                         <li class="tab__btn--item" role="presentation">
                           <button class="tab__btn--link" data-bs-toggle="tab" data-bs-target="#bestseller" type="button" role="tab" aria-selected="false">
-                            Best Seller</button>
+                            Más vendidos</button>
                         </li>
-                        <li class="tab__btn--item" role="presentation">
+                         <li class="tab__btn--item" role="presentation">
+                          <button class="tab__btn--link" data-bs-toggle="tab" data-bs-target="#top" type="button" role="tab" aria-selected="false">
+                            Ofertas </button>
+                        </li>
+                   <!--      <li class="tab__btn--item" role="presentation">
                           <button class="tab__btn--link" data-bs-toggle="tab" data-bs-target="#top" type="button" role="tab" aria-selected="false">
                             Top </button>
                         </li>
@@ -722,7 +726,7 @@
                         <li class="tab__btn--item" role="presentation">
                           <button class="tab__btn--link" data-bs-toggle="tab" data-bs-target="#rating" type="button" role="tab" aria-selected="false">
                             top rating</button>
-                        </li>
+                        </li> -->
                       </ul>
                 </div>
                 <div class="product__section--inner">
@@ -730,7 +734,7 @@
                         <div class="col-lg-3">
                             <div class="sidebar__category">
                                 <div class="choose__category--content">
-                                    <h2 class="choose__category--title">Choose category</h2>
+                                    <h2 class="choose__category--title"> Categorías</h2>
                                     <ul class="choose__category--menu">
                                         <li class="choose__category--menu__list" *ngFor="let category of categories, let i = index ">
                                             <!-- <svg class="choose__category--menu__icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -841,7 +845,7 @@
                                                         </ul>
                                                     </div>
                                                     <div class="product__card--content">
-                                                        <ul class="rating product__card--rating d-flex">
+                                             <!--            <ul class="rating product__card--rating d-flex">
                                                             <li class="rating__list">
                                                                 <span class="rating__icon">
                                                                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -880,11 +884,12 @@
                                                             <li>
                                                                 <span class="rating__review--text">(126) Review</span>
                                                             </li>
-                                                        </ul>
+                                                        </ul> -->
                                                         <h3 class="product__card--title"><a href="product-details.html">{{product.name}} </a></h3>
                                                         <div class="product__card--price">
-                                                            <span class="current__price">$2{{product.price}}</span>
-                                                            <span class="old__price"> $362.00</span>
+                                                            <span class="old__price"> Precio: </span>
+                                                            <span class="current__price">${{product.price}}</span>
+                                                            <!-- <span class="old__price"> $362.00</span> -->
                                                         </div>
                                                         <div class="product__card--footer">
                                                             <a class="product__card--btn primary__btn" href="cart.html">
